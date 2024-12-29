@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasonal Global Education</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            max-width: 150px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0073e6;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin: 20px 0;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            background-color: #0056b3;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .language-switcher {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .language-switcher button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0073e6;
+            color: white;
+            cursor: pointer;
+        }
+        .language-switcher button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function switchLanguage(lang) {
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="logo-placeholder.png" alt="Seasonal Global Education Logo">
+        <h1>سيزونال جلوبال للخدمات التعليمية</h1>
+    </header>
+
+    <div class="language-switcher">
+        <button onclick="switchLanguage('ar')">العربية</button>
+        <button onclick="switchLanguage('en')">English</button>
+    </div>
+
+    <nav>
+        <a href="#about">عن الشركة</a>
+        <a href="#services">خدماتنا</a>
+        <a href="#contact">اتصل بنا</a>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="section" data-lang="ar" style="display: block;">
+            <h2>عن الشركة</h2>
+            <p>بدأت سيزونال جلوبال للخدمات التعليمية في عام 2016 في ماليزيا كشركة رائدة مرخصة تقدم خدمات تعليمية متنوعة للطلاب الراغبين بالدراسة في الخارج.</p>
+        </section>
+        <section id="about" class="section" data-lang="en" style="display: none;">
+            <h2>About Us</h2>
+            <p>Seasonal Global Education began in 2016 in Malaysia as a leading licensed company offering diverse educational services for students wishing to study abroad.</p>
+        </section>
+
+        <section id="services" class="section" data-lang="ar" style="display: block;">
+            <h2>خدماتنا</h2>
+            <ul>
+                <li>مساعدة الطالب على إعداد الملف الشخصي وإكمال طلب التقديم.</li>
+                <li>تقديم المعلومات اللازمة عن الجامعات والتخصصات.</li>
+                <li>متابعة إجراءات التأشيرة الدراسية.</li>
+                <li>توفير خدمة تذاكر السفر.</li>
+                <li>تقديم الاستشارة بشأن التخصص والجامعة المناسبة.</li>
+            </ul>
+        </section>
+        <section id="services" class="section" data-lang="en" style="display: none;">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Assisting students in preparing their profiles and completing applications.</li>
+                <li>Providing necessary information about universities and programs.</li>
+                <li>Following up on student visa procedures.</li>
+                <li>Offering travel ticket services.</li>
+                <li>Providing guidance on choosing the right university and major.</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="section" data-lang="ar" style="display: block;">
+            <h2>اتصل بنا</h2>
+            <p>للتواصل معنا، يرجى ملء النموذج التالي:</p>
+            <form>
+                <label for="name">الاسم:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">البريد الإلكتروني:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">الرسالة:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+                <button type="submit">إرسال</button>
+            </form>
+        </section>
+        <section id="contact" class="section" data-lang="en" style="display: none;">
+            <h2>Contact Us</h2>
+            <p>To get in touch, please fill out the form below:</p>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 سيزونال جلوبال للخدمات التعليمية. جميع الحقوق محفوظة. | © 2024 Seasonal Global Education. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
